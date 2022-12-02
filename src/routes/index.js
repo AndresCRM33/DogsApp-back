@@ -26,7 +26,7 @@ router.get("/dogs", async (req, res) => {
             if(searchDog.length > 0){
                 return res.status(200).json(searchDog)
             }else{
-                return res.status(404).send("No se encontró el perro ingresado por query")
+                return res.status(404).send("breed not founded")
             }
         }
         return res.status(200).json(getAll)
